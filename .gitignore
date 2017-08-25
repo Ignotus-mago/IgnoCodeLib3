@@ -24,6 +24,8 @@ hs_err_pid*
 /.project
 /.classpath
 /bin
+# and for the moment let's ignore the template and distribution files #
+/processing-library-template-3.0.1
 
 # Compiled source #
 ###################
