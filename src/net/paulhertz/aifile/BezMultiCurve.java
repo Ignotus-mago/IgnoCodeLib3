@@ -38,7 +38,7 @@ import processing.core.PApplet;
 public class BezMultiCurve extends BezShape {
 
 	/**
-	 * Constructs a multi-segment BŽzier curve from an array of float.
+	 * Constructs a multi-segment Bezier curve from an array of float.
 	 * Fill, stroke, and weight are set from their values in the Processing environment.
 	 * The first coordinate pair is the initial anchor point, the following coordinate pairs correspond
 	 * to the first control point, second control point, and final anchor point of each additional curve.
@@ -65,7 +65,7 @@ public class BezMultiCurve extends BezShape {
 	}
 	
 	/**
-	 * Returns a multi-segment BŽzier curve from an array of float.
+	 * Returns a multi-segment Bezier curve from an array of float.
 	 * Fill, stroke, and weight are set from their values in the Processing environment.
 	 * The first coordinate pair is the initial anchor point, the following coordinate pairs correspond
 	 * to the first control point, second control point, and final anchor point of each additional curve.
@@ -78,7 +78,7 @@ public class BezMultiCurve extends BezShape {
 		return new BezMultiCurve(parent, coords);
 	}
 	/**
-	 * Returns a multi-segment BŽzier curve from an array of float.
+	 * Returns a multi-segment Bezier curve from an array of float.
 	 * Fill, stroke, and weight are set from their values in the Processing environment.
 	 * The first coordinate pair is the initial anchor point, the following coordinate pairs correspond
 	 * to the first control point, second control point, and final anchor point of each additional curve.
