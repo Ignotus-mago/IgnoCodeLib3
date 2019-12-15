@@ -19,10 +19,12 @@
 package net.paulhertz.aifile;
 
 import java.io.PrintWriter;
+
 import net.paulhertz.aifile.AIFileWriter;
 import net.paulhertz.aifile.BezShape;
 import net.paulhertz.aifile.BezVertex;
 import net.paulhertz.aifile.Vertex2DINF;
+
 import processing.core.PApplet;
 import processing.core.PGraphics;
 
@@ -182,6 +184,5 @@ public class BezVertex implements Vertex2DINF {
 	public void write(PrintWriter output) {
 		 AIFileWriter.psCurveTo(cx1, cy1, cx2, cy2, x, y, output);
 	}
-
-
+	
 }

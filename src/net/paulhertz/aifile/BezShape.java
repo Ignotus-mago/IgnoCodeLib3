@@ -133,8 +133,8 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	protected boolean hasFill;
 	/** flags if shape has a stroke or not */
 	protected boolean hasStroke;
-  /** flags that we should draw control points and vertices */
-  protected boolean isMarked = false;
+	/** flags that we should draw control points and vertices */
+	protected boolean isMarked = false;
 	/** fill color for shape */
 	protected int fillColor;
 	/** stroke color for shape */
@@ -182,7 +182,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * to the instance variable <code>ctm</code>, but no transform is performed.  Note that drawing
 	 * is affected by the current Processing transform.
 	 *  
-   * @param parent   PApplet used for calls to the Processing environment, notably for drawing
+     * @param parent   PApplet used for calls to the Processing environment, notably for drawing
 	 * @param x		x-coordinate of initial point
 	 * @param y		y-coordinate of initial point
 	 * @param isClosed   true if shape is closed, false if it is open
@@ -463,8 +463,8 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	public void append(float x, float y) {
 		this.append(new LineVertex(x, y));
 	}
-
-  /**
+	
+	/**
    * Returns size of number of vertices (BezVertex and LineVertex) in curves.
    * @return size of curves ArrayList.
    */
@@ -495,7 +495,6 @@ public class BezShape extends DisplayComponent implements ColorableINF {
     return count;
   }
 	
-
 	/*-------------------------------------------------------------------------------------------*/
 	/*                                                                                           */
 	/* METHODS FOR STROKE, FILL AND WEIGHT ATTRIBUTES                                            */ 
@@ -712,18 +711,18 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 		bezType = newBezType;
 	}
 
-  /**
-   * @return  {@code true} if this shape is marked with vertices and control points, {@code false} otherwise.
-   */
-  public boolean isMarked() {
-    return isMarked;
-  }
-  /**
-   * @param newIsMarked   {@code true} if this shape is marked with vertices and control points, {@code false} otherwise
-   */
-  public void setIsMarked(boolean newIsMarked) {
-    isMarked = newIsMarked;
-  }
+	/**
+	 * @return  {@code true} if this shape is marked with vertices and control points, {@code false} otherwise.
+     */
+	public boolean isMarked() {
+	  return isMarked;
+	}
+    /**
+     * @param newIsMarked   {@code true} if this shape is marked with vertices and control points, {@code false} otherwise
+     */
+    public void setIsMarked(boolean newIsMarked) {
+      isMarked = newIsMarked;
+    }
 
 	
 	/*-------------------------------------------------------------------------------------------*/
@@ -1716,40 +1715,40 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 		while (it.hasNext()) {
 			Vertex2DINF bez = it.next();
 			bez.draw(parent);
-      if (isMarked) {
-        if (bez.segmentType() == CURVE_SEGMENT) {
-         parent.pushStyle();
-         parent.noFill();
-         parent.stroke(192);
-         parent.strokeWeight(1);
-         BezVertex bz = (BezVertex)bez;
-         if (i > 0) {
-        	 parent.line(curves.get(i-1).x(), curves.get(i-1).y(), bz.cx1(), bz.cy1());
-        	 parent.line(bz.x(), bz.y(), bz.cx2(), bz.cy2());
-         }
-         else {
-           int w = 6;
-           parent.pushStyle();
-           parent.noStroke();
-           parent.fill(160);
-           // parent.square(x - w/2, y - w/2, w);
-           parent.rect(x - w/2, y - w/2, w, w);
-           parent.popStyle();
-           parent.line(x, y, bz.cx1(), bz.cy1());
-           parent.line(bz.x(), bz.y(), bz.cx2(), bz.cy2());
-         }
-         parent.popStyle();
-       }
-       bez.mark(parent);
-      }
-      i++;
-		}
-		if (isClosed()) {
-			parent.endShape(PApplet.CLOSE);
-		}
-		else {
-			parent.endShape();
-		}
+		  if (isMarked) {
+			if (bez.segmentType() == CURVE_SEGMENT) {
+			 parent.pushStyle();
+			 parent.noFill();
+			 parent.stroke(192);
+			 parent.strokeWeight(1);
+			 BezVertex bz = (BezVertex)bez;
+			 if (i > 0) {
+				 parent.line(curves.get(i-1).x(), curves.get(i-1).y(), bz.cx1(), bz.cy1());
+				 parent.line(bz.x(), bz.y(), bz.cx2(), bz.cy2());
+			 }
+			 else {
+			   int w = 6;
+			   parent.pushStyle();
+			   parent.noStroke();
+			   parent.fill(160);
+			   // parent.square(x - w/2, y - w/2, w);
+			   parent.rect(x - w/2, y - w/2, w, w);
+			   parent.popStyle();
+			   parent.line(x, y, bz.cx1(), bz.cy1());
+			   parent.line(bz.x(), bz.y(), bz.cx2(), bz.cy2());
+			 }
+			 parent.popStyle();
+		   }
+		   bez.mark(parent);
+		  }
+		  i++;
+			}
+			if (isClosed()) {
+				parent.endShape(PApplet.CLOSE);
+			}
+			else {
+				parent.endShape();
+			}
 	}
 
 	/** 
