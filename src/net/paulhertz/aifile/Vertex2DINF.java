@@ -67,6 +67,16 @@ public interface Vertex2DINF {
 	 * @param pg   a PGraphics instance
 	 */
 	public void draw(PGraphics pg);
+  /**
+   * Draws marks at vertices and control points to the display.
+   *
+   */
+  public void mark(PGraphics pg);
+  /**
+   * Draws marks at vertices and control points to an offscreen buffer.
+   *
+   */
+  public void mark(PApplet parent);
 	/**
 	 * Writes a path segment to file. Multiple calls to this method should be bracketed 
 	 * by AIFileWriter.psMoveTo and AIFileWriter.paintPath commands 

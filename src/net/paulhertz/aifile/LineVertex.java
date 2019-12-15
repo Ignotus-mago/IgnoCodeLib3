@@ -91,7 +91,27 @@ public class LineVertex implements Vertex2DINF {
 		 pg.vertex(x, y);
 	}
 
-	 @Override
+	@Override
+	public void mark(PApplet parent) {
+		float w = 6;
+    parent.pushStyle();
+    parent.noStroke();
+    parent.fill(160);
+    parent.rect(x - w/2, y - w/2, w, w);
+    parent.popStyle();		 		
+	}
+
+	@Override
+	public void mark(PGraphics pg) {
+    float w = 6;
+    pg.pushStyle();
+    pg.noStroke();
+    pg.fill(160);
+    pg.rect(x - w/2, y - w/2, w, w);
+    pg.popStyle();		 
+	}
+
+	@Override
 	public void write(PrintWriter output) {
 		AIFileWriter.psLineTo(x, y, output);
 	}

@@ -133,6 +133,8 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	protected boolean hasFill;
 	/** flags if shape has a stroke or not */
 	protected boolean hasStroke;
+  /** flags that we should draw control points and vertices */
+  protected boolean isMarked = false;
 	/** fill color for shape */
 	protected int fillColor;
 	/** stroke color for shape */
@@ -162,6 +164,12 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 *  see <a href="http://www.whizkidtech.redprince.net/bezier/circle/kappa/">http://www.whizkidtech.redprince.net/bezier/circle/kappa/</a>
 	 */
 	public final static double KAPPA = 0.5522847498;
+  /**
+   * LAMBDA = KAPPA/√2, a value for weighting Bezier splines based on the length of line segments between anchor points
+   * derived from the ratio of the chord of a quarter circle to KAPPA, LAMBDA = KAPPA * (1/√2)
+   *
+   */
+  public final static double LAMBDA = 0.39052429175;
 	/** The most recent transform, set by calls to {@link #transform(Matrix3) transform} */
 	protected Matrix3 ctm; 
 
@@ -174,7 +182,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * to the instance variable <code>ctm</code>, but no transform is performed.  Note that drawing
 	 * is affected by the current Processing transform.
 	 *  
-     * @param parent   PApplet used for calls to the Processing environment, notably for drawing
+   * @param parent   PApplet used for calls to the Processing environment, notably for drawing
 	 * @param x		x-coordinate of initial point
 	 * @param y		y-coordinate of initial point
 	 * @param isClosed   true if shape is closed, false if it is open
@@ -456,6 +464,37 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 		this.append(new LineVertex(x, y));
 	}
 
+  /**
+   * Returns size of number of vertices (BezVertex and LineVertex) in curves.
+   * @return size of curves ArrayList.
+   */
+  public int size() {
+    return curves.size();
+  }
+  
+  /**
+   * Returns number of points (anchor points and control points) in curves.
+   * Dosn't count the start point.
+   * @return total numbr of points in curves ArrayList data.
+   */
+  public int pointCount() {
+    int count = 0;
+    ListIterator<Vertex2DINF> it = curveIterator();
+    while (it.hasNext()) {
+      Vertex2DINF bez = it.next();
+      if (bez.segmentType() == CURVE_SEGMENT) {
+        count += 3;
+      }
+      else if (bez.segmentType() == LINE_SEGMENT) {
+        count += 1;
+      }
+      else {
+        // error! should never arrive here
+      }
+    }
+    return count;
+  }
+	
 
 	/*-------------------------------------------------------------------------------------------*/
 	/*                                                                                           */
@@ -672,6 +711,19 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	public void setBezType(BezType newBezType) {
 		bezType = newBezType;
 	}
+
+  /**
+   * @return  {@code true} if this shape is marked with vertices and control points, {@code false} otherwise.
+   */
+  public boolean isMarked() {
+    return isMarked;
+  }
+  /**
+   * @param newIsMarked   {@code true} if this shape is marked with vertices and control points, {@code false} otherwise
+   */
+  public void setIsMarked(boolean newIsMarked) {
+    isMarked = newIsMarked;
+  }
 
 	
 	/*-------------------------------------------------------------------------------------------*/
@@ -1639,6 +1691,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 
 	/** 
 	 * Draws this shape to the display. Calls beginShape and endShape on its own.
+	 * If isMarked is true, will mark anchor and control points.
 	 */
 	public void draw() {
 		if (!this.isVisible) return;
@@ -1659,9 +1712,37 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 		// equivalent to startPoint.draw(this.parent);
 		parent.vertex(this.x, this.y);
 		ListIterator<Vertex2DINF> it = curveIterator();
+		int i = 0;
 		while (it.hasNext()) {
 			Vertex2DINF bez = it.next();
 			bez.draw(parent);
+      if (isMarked) {
+        if (bez.segmentType() == CURVE_SEGMENT) {
+         parent.pushStyle();
+         parent.noFill();
+         parent.stroke(192);
+         parent.strokeWeight(1);
+         BezVertex bz = (BezVertex)bez;
+         if (i > 0) {
+        	 parent.line(curves.get(i-1).x(), curves.get(i-1).y(), bz.cx1(), bz.cy1());
+        	 parent.line(bz.x(), bz.y(), bz.cx2(), bz.cy2());
+         }
+         else {
+           int w = 6;
+           parent.pushStyle();
+           parent.noStroke();
+           parent.fill(160);
+           // parent.square(x - w/2, y - w/2, w);
+           parent.rect(x - w/2, y - w/2, w, w);
+           parent.popStyle();
+           parent.line(x, y, bz.cx1(), bz.cy1());
+           parent.line(bz.x(), bz.y(), bz.cx2(), bz.cy2());
+         }
+         parent.popStyle();
+       }
+       bez.mark(parent);
+      }
+      i++;
 		}
 		if (isClosed()) {
 			parent.endShape(PApplet.CLOSE);
@@ -1674,6 +1755,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	/** 
 	 * Draws this shape to an offscreen PGraphics. Calls beginShape and endShape on its own. 
 	 * It's up to the user to call beginDraw() and endDraw() on the PGraphics instance.
+	 * If isMarked is true, draws marks for anchor and control points.
 	 * @param pg   a PGraphics instance
 	 */
 	public void draw(PGraphics pg) {
@@ -1695,9 +1777,37 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 		// equivalent to startPoint.draw(this.parent);
 		pg.vertex(this.x, this.y);
 		ListIterator<Vertex2DINF> it = curveIterator();
+		int i = 0;
 		while (it.hasNext()) {
 			Vertex2DINF bez = it.next();
 			bez.draw(pg);
+      if (isMarked) {
+        if (bez.segmentType() == CURVE_SEGMENT) {
+         pg.pushStyle();
+         pg.noFill();
+         pg.stroke(192);
+         pg.strokeWeight(1);
+         BezVertex bz = (BezVertex)bez;
+         if (i > 0) {
+        	 pg.line(curves.get(i-1).x(), curves.get(i-1).y(), bz.cx1(), bz.cy1());
+        	 pg.line(bz.x(), bz.y(), bz.cx2(), bz.cy2());
+         }
+         else {
+           int w = 6;
+           pg.pushStyle();
+           pg.noStroke();
+           pg.fill(160);
+           // pg.square(x - w/2, y - w/2, w);
+           pg.rect(x - w/2, y - w/2, w, w);
+           pg.popStyle();
+           pg.line(x, y, bz.cx1(), bz.cy1());
+           pg.line(bz.x(), bz.y(), bz.cx2(), bz.cy2());
+         }
+         pg.popStyle();
+       }
+       bez.mark(pg);
+      }
+      i++;
 		}
 		if (isClosed()) {
 			pg.endShape(PApplet.CLOSE);
@@ -1710,7 +1820,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 
 	/** 
 	 * Draws this shape to the display. Calls beginShape and endShape on its own.
-	 * Uses current fill, stroke and weight from Processing environment.
+	 * Uses current fill, stroke and weight from Processing environment. Doesn't mark vertices.
 	 */
 	public void drawQuick() {
 		parent.beginShape();
@@ -1985,7 +2095,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 
 	
 	/**
-	 * Constructs a single B�zier curve.
+	 * Constructs a single Bezier curve.
 	 * Fill, stroke, and weight are set from their values in the Processing environment. 
 	 * @param ax1   x-coordinate of initial anchor point
 	 * @param ay1   y-coordinate of initial anchor point

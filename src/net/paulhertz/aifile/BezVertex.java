@@ -19,12 +19,10 @@
 package net.paulhertz.aifile;
 
 import java.io.PrintWriter;
-
 import net.paulhertz.aifile.AIFileWriter;
 import net.paulhertz.aifile.BezShape;
 import net.paulhertz.aifile.BezVertex;
 import net.paulhertz.aifile.Vertex2DINF;
-
 import processing.core.PApplet;
 import processing.core.PGraphics;
 
@@ -150,10 +148,40 @@ public class BezVertex implements Vertex2DINF {
 		 pg.bezierVertex(cx1, cy1, cx2, cy2, x, y);
 	}
 
-		@Override
-	 public void write(PrintWriter output) {
+	@Override
+	public void mark(PApplet parent) {
+    int w = 6;
+    int d = w - 1;
+    parent.pushStyle();
+    parent.noStroke();
+    parent.fill(192);
+    parent.ellipse(cx1,cy1, d, d);
+    parent.ellipse(cx2,cy2, d, d);
+    parent.fill(160);
+    // square(x - w/2, y - w/2, w);
+    parent.rect(x - w/2, y - w/2, w, w);
+    parent.popStyle();
+	}
+
+	@Override
+	public void mark(PGraphics pg) {
+    int w = 6;
+    int d = w - 1;
+    pg.pushStyle();
+    pg.noStroke();
+    pg.fill(192);
+    pg.ellipse(cx1,cy1, d, d);
+    pg.ellipse(cx2,cy2, d, d);
+    pg.fill(160);
+    // square(x - w/2, y - w/2, w);
+    pg.rect(x - w/2, y - w/2, w, w);
+    pg.popStyle();
+	}
+
+	@Override
+	public void write(PrintWriter output) {
 		 AIFileWriter.psCurveTo(cx1, cy1, cx2, cy2, x, y, output);
-	 }
+	}
 
 
 }
