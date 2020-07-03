@@ -160,13 +160,13 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 		                        BEZ_LINE, BEZ_CURVE, BEZ_MULTILINE, BEZ_MULTICURVE, BEZ_RECTANGLE, BEZ_POLY};
 	/** 
 	 *  KAPPA = (distance between Bezier anchor and its associated control point) / (circle radius)
-	 *  when a circle is divided into 4 sectors of 90 degrees.
+	 *  when a circle is divided into 4 sectors of 90 degrees, approximately 0.5522847498.
 	 *  see <a href="http://www.whizkidtech.redprince.net/bezier/circle/kappa/">http://www.whizkidtech.redprince.net/bezier/circle/kappa/</a>
 	 */
 	public final static double KAPPA = 0.5522847498;
   /**
    * LAMBDA = KAPPA/√2, a value for weighting Bezier splines based on the length of line segments between anchor points
-   * derived from the ratio of the chord of a quarter circle to KAPPA, LAMBDA = KAPPA * (1/√2)
+   * derived from the ratio of the chord of a quarter circle to KAPPA, LAMBDA = KAPPA * (1/√2), about 0.5522847498
    *
    */
   public final static double LAMBDA = 0.39052429175;
@@ -1154,6 +1154,22 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	}
 	public float[] asPolygon() {
 		return asPolygon(this.parent, this.polySteps);
+	}
+	
+	/**
+	 * @TODO this is new
+	 * @param steps number of line segments in a curve
+	 * @return
+	 */
+	public BezShape asPolygonList(int steps) {
+		BezShape bez;
+		if (this.isClosed()) {
+			bez = BezPoly.makePoly(this.asPolygon(steps));
+		}
+		else {
+			bez = BezMultiLine.makeMultiLine(this.asPolygon(steps));
+		}
+		return bez;
 	}
 
 	/**
@@ -2147,5 +2163,5 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	public static BezMultiCurve bezMultiCurve(PApplet parent, float[] coords) {
 		return BezMultiCurve.makeMultiCurve(parent, coords);
 	}
-	
+
 }

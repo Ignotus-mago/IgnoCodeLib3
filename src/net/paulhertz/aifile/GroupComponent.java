@@ -35,7 +35,7 @@ import processing.core.PGraphics;
 
 /**
  * @author paulhz
- * TODO bounding box and geometric center point of group
+ * TODO bounding box and geometric center point of group, name of group (?)
  */
 /**
  * Groups together geometry ({@link net.paulhertz.aifile.BezShape BezShape}), 
