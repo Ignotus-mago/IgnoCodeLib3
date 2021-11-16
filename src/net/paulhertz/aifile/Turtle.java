@@ -22,14 +22,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.BezTriangle;
-import net.paulhertz.aifile.ColorableINF;
-import net.paulhertz.aifile.DisplayComponent;
-import net.paulhertz.aifile.GroupComponent;
-import net.paulhertz.aifile.Palette;
-import net.paulhertz.aifile.TurtleState;
-
 import processing.core.PApplet;
 import processing.core.PGraphics;
 import processing.core.PVector;

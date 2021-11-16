@@ -18,11 +18,8 @@
  */
 package net.paulhertz.aifile;
 
-import processing.core.PApplet;
-
-import net.paulhertz.aifile.BezLine;
-import net.paulhertz.aifile.BezShape;
 import net.paulhertz.geom.GeomUtils;
+import processing.core.PApplet;
 
 /**
  * Provides factory methods to construct and operate on a straight line.

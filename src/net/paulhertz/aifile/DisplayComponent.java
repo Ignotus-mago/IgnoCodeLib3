@@ -19,13 +19,14 @@
 package net.paulhertz.aifile;
 
 import java.io.PrintWriter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
-import net.paulhertz.aifile.DisplayComponent;
-import net.paulhertz.aifile.Visitable;
 import net.paulhertz.geom.Matrix3;
-
-import processing.core.*;
+import processing.core.PApplet;
+import processing.core.PGraphics;
 
 /**
  * @author Paul Hertz

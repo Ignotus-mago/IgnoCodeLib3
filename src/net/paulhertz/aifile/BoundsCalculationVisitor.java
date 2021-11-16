@@ -19,12 +19,6 @@
 
 package net.paulhertz.aifile;
 
-import net.paulhertz.aifile.BezRectangle;
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.BoundsCalculationVisitor;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.DisplayComponent;
-
 import processing.core.PApplet;
 
 /**

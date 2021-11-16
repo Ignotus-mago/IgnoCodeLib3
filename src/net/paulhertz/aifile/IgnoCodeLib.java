@@ -28,7 +28,7 @@
 package net.paulhertz.aifile;
 
 
-import processing.core.*;
+import processing.core.PApplet;
 
 /**
  * IgnoCodeLib library initializer, library information source.

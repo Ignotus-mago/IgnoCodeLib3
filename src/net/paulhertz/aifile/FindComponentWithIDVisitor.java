@@ -1,15 +1,5 @@
 package net.paulhertz.aifile;
 
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.CustomComponent;
-import net.paulhertz.aifile.DisplayComponent;
-import net.paulhertz.aifile.DocumentComponent;
-import net.paulhertz.aifile.FindComponentWithIDVisitor;
-import net.paulhertz.aifile.GroupComponent;
-import net.paulhertz.aifile.LayerComponent;
-import net.paulhertz.aifile.PointText;
-
 public class FindComponentWithIDVisitor extends ComponentVisitor {
 	private int idToFind;
 	private DisplayComponent foundComp;

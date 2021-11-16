@@ -20,9 +20,8 @@ package net.paulhertz.aifile;
 
 import java.io.PrintWriter;
 
-import net.paulhertz.aifile.Vertex2DINF;
-
-import processing.core.*;
+import processing.core.PApplet;
+import processing.core.PGraphics;
 
 /**
  * @author paulhz

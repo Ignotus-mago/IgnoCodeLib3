@@ -20,11 +20,6 @@ package net.paulhertz.aifile;
 
 import java.io.PrintWriter;
 
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.BezVertex;
-import net.paulhertz.aifile.Vertex2DINF;
-
 import processing.core.PApplet;
 import processing.core.PGraphics;
 

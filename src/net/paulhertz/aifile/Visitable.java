@@ -18,8 +18,6 @@
  */
 package net.paulhertz.aifile;
 
-import net.paulhertz.aifile.ComponentVisitor;
-
 /**
  * Interface for display components that implement the Visitor design pattern.
  *

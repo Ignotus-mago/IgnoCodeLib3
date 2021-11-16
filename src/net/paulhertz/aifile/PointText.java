@@ -25,16 +25,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import net.paulhertz.geom.Matrix3;
-
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.DisplayComponent;
-import net.paulhertz.aifile.Palette;
-import net.paulhertz.aifile.PointText;
-import net.paulhertz.aifile.RGBColor;
-//import java.util.ListIterator;
-
-import processing.core.*;
+import processing.core.PApplet;
+import processing.core.PFont;
+import processing.core.PGraphics;
 
 /**
  * @author paulhz

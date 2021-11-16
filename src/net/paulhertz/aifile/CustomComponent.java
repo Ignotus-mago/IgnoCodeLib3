@@ -22,15 +22,10 @@ package net.paulhertz.aifile;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Iterator;
+import java.util.List;
 
 import net.paulhertz.geom.Matrix3;
-
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.DisplayComponent;
-
 import processing.core.PApplet;
 import processing.core.PGraphics;
 

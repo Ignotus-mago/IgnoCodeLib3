@@ -17,14 +17,10 @@
  * 
  */
 package net.paulhertz.aifile;
-import processing.core.*;
-
 import java.io.PrintWriter;
 
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.LineVertex;
-import net.paulhertz.aifile.Vertex2DINF;
+import processing.core.PApplet;
+import processing.core.PGraphics;
 
 
 /**

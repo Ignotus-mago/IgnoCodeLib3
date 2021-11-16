@@ -19,16 +19,10 @@
 package net.paulhertz.aifile;
 
 import java.io.PrintWriter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 import net.paulhertz.geom.Matrix3;
-
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.DisplayComponent;
-import net.paulhertz.aifile.DocumentComponent;
-import net.paulhertz.aifile.LayerComponent;
-
 import processing.core.PApplet;
 import processing.core.PGraphics;
 

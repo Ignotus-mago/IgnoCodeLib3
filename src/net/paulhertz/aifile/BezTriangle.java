@@ -20,12 +20,9 @@ package net.paulhertz.aifile;
 
 import java.awt.geom.Point2D;
 
-import processing.core.PApplet;
-
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.BezTriangle;
 import net.paulhertz.geom.GeomUtils;
 import net.paulhertz.geom.Matrix3;
+import processing.core.PApplet;
 
 /**
  * Provides factory methods to create and operate on a triangular shape.

@@ -21,11 +21,7 @@ package net.paulhertz.aifile;
 import java.awt.geom.Point2D;
 
 import net.paulhertz.geom.GeomUtils;
-
 import processing.core.PApplet;
-
-import net.paulhertz.aifile.BezCircle;
-import net.paulhertz.aifile.BezShape;
 
 /**
  * Provides factory methods to create a closed circular shape.

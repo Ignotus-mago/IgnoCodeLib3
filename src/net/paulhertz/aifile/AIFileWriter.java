@@ -19,20 +19,15 @@
 package net.paulhertz.aifile;
 
 
-import java.awt.geom.Point2D;
 import java.awt.Rectangle;
-import java.io.*;
+import java.awt.geom.Point2D;
+import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 // import java.util.ListIterator;
-
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.CMYKColor;
-import net.paulhertz.aifile.PointText;
-import net.paulhertz.aifile.RGBColor;
 
 /**
  * @author Paul Hertz

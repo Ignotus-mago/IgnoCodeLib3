@@ -19,11 +19,6 @@
 package net.paulhertz.aifile;
 
 import net.paulhertz.geom.Matrix3;
-
-import net.paulhertz.aifile.BezRectangle;
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.LineVertex;
-import net.paulhertz.aifile.Vertex2DINF;
 import processing.core.PApplet;
 
 /**

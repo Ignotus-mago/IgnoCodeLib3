@@ -17,7 +17,7 @@
  * 
  */
 package net.paulhertz.geom;
-import java.awt.geom.*;
+import java.awt.geom.Point2D;
 
 // rotations are CCW in Cartesian system, but CW in Processing display coordinate system
 

@@ -18,9 +18,6 @@
  */
 package net.paulhertz.aifile;
 
-import net.paulhertz.aifile.BezMultiCurve;
-import net.paulhertz.aifile.BezShape;
-
 import processing.core.PApplet;
 
 /**

@@ -20,12 +20,9 @@ package net.paulhertz.aifile;
 
 import java.awt.geom.Point2D;
 
-import processing.core.PApplet;
-
-import net.paulhertz.aifile.BezRegularPoly;
-import net.paulhertz.aifile.BezShape;
 import net.paulhertz.geom.GeomUtils;
 import net.paulhertz.geom.Matrix3;
+import processing.core.PApplet;
 
 /**
  * Provides factory methods to construct a regular polygonal shape consisting of straight lines.

@@ -18,7 +18,8 @@
  */
 
 package net.paulhertz.util;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * @author paulhz

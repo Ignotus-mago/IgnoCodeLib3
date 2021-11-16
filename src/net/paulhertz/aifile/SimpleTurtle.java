@@ -1,8 +1,10 @@
 package net.paulhertz.aifile;
 
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import processing.core.PApplet;
 import processing.core.PGraphics;
 import processing.core.PVector;
