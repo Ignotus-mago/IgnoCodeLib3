@@ -72,11 +72,9 @@ import processing.core.PMatrix2D;
  * various coding examples for different methods of writing an Illustrator file. In some instances, one line of code will do all the work.
  * </p>
  * 
- * <p>Static methods provide automatic creation of multiCurves, multiLines, regular polygons, equilateral triangles, general triangles, 
- * rectangles, lines, curves, multilines and multicurves. These may become subclasses in the future.</p>
+ * <p>See various classes derived from BezShape for methods for creating rectangles, polygons, multi-segment paths, etc. </p>
  *  
  * @example SimpleShapeExport 
- * @example TransformShapeExport
  * 
  */
 public class BezShape extends DisplayComponent implements ColorableINF {
