@@ -25,7 +25,7 @@ import processing.core.PApplet;
 /** 
  * Provides factory methods to construct a closed polygonal path consisting of straight line segments.
  * 
- * @example Polygons
+ * See code example Polygons
  */
 public class BezPoly extends BezShape {
 

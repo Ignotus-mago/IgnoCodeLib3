@@ -34,7 +34,7 @@ import processing.core.PGraphics;
  * down the document tree, or as a file output list, similarly cascading the {@link #write(PrintWriter)} command. 
  * Processing and Adobe Illustrator use different coordinate systems. To 
  * 
- * @example DocumentExport
+ * See code example DocumentExport
  */
 public class DocumentComponent extends DisplayComponent {
 	protected String title; 

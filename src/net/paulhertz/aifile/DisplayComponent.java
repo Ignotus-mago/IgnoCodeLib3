@@ -91,7 +91,7 @@ public abstract class DisplayComponent implements Visitable {
 	 * Returns the component at index from the children of this component, 
 	 * throws an {@code UnsupportedOperationException} if component is terminal.
 	 * Throws an IndexOutOfBoundsException 
-	 * if index is out of range (index < 0 || index >= size). 
+	 * if index is out of range (index &lt; 0 || index &gt;= size). 
 	 * @param index   index to component
 	 * @return   the DisplayComponent at the supplied index
 	 */

@@ -19,6 +19,10 @@
 
 package net.paulhertz.aifile;
 
+/**
+ * Interface for DisplayComponents that can be colored. 
+ *
+ */
 public interface ColorableINF {
 	/**
 	 * @return   true if this component is filled, false otherwise

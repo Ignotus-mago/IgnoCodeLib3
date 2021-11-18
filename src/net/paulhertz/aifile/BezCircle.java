@@ -30,7 +30,7 @@ import processing.core.PApplet;
  * {@link net.paulhertz.aifile.IgnoCodeLib IgnoCodeLib}, which must be correctly initialized in setup. 
  * If IgnoCodeLib does not have a reference to a PApplet, it throws a NullPointerException.
  * 
- * @example EllipsesAndCircles 
+ * See example code EllipsesAndCircles 
  */
 public class BezCircle extends BezShape {
 

@@ -72,9 +72,9 @@ import processing.core.PMatrix2D;
  * various coding examples for different methods of writing an Illustrator file. In some instances, one line of code will do all the work.
  * </p>
  * 
- * <p>See various classes derived from BezShape for methods for creating rectangles, polygons, multi-segment paths, etc. </p>
+ * <p>See various classes derived from BezShape for methods for creating rectangles, polygons, multi-segment paths, etc. MURKY </p>
  *  
- * @example SimpleShapeExport 
+ * See example code SimpleShapeExport 
  * 
  */
 public class BezShape extends DisplayComponent implements ColorableINF {
@@ -362,10 +362,10 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	}
 
 	
-	/** 
-	 * @throws UnsupportedOperationException, BezShape is a terminal (leaf) node
-	 */
 	@Override
+	/** 
+	 * @throws UnsupportedOperationException BezShape is a terminal (leaf) node
+	 */
 	public void add(DisplayComponent component) {
 		throw new UnsupportedOperationException("Attempt to add child to a terminal node."); 
 	}
@@ -980,7 +980,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * Returns a copy of the geometry of this shape as an {@code ArrayList}.  Note that the startPoint is not included, 
 	 * you can obtain that separately from {@link #startVertex()} or from {@link #x()} and {@link #y()}.
 	 * @return an ArrayList with all the Vertex2DINF segments that compose this shape, in order appended
-	 * @fixed build array with Vertex2DINF.clone(), June 14, 2012
+	 * fixed build array with Vertex2DINF.clone(), June 14, 2012
 	 * @since  October 3, 2011
 	 */
 	public ArrayList<Vertex2DINF> curvesCopy() {
@@ -1063,6 +1063,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * this method, which always recalculates {@code xcoords} and {@code ycoords} and {@code boundsRect}
 	 * @param steps    number of straight line segments to divide Bezier curves into
 	 * @param parent   reference to a PApplet needed to build a polygon from a Bezier curve
+	 * @return         list of floats, coordinates for a polygon approximation of this shape.
 	 */
 	public float[] asPolygon(PApplet parent, int steps) {
 		ListIterator<Vertex2DINF> it = curveIterator();
@@ -1591,8 +1592,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	}
 
 	/**
-	 * Alternate method of calling {@link #transform(Matrix3) transform}.
-	 * @deprecated
+	 * @deprecated   call {@link #transform(Matrix3) transform} instead.
 	 * @param matx
 	 */
 	public void transformShape(Matrix3 matx) {

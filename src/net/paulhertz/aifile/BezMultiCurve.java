@@ -30,7 +30,7 @@ import processing.core.PApplet;
  * code in angle brackets. The sample file is fine. Here's the right signature:<br />
  * {@code public boolean fadeOut(ArrayList<? extends BezShape> shapes, int step)}
  * </p>
- * @example DrawMulti 
+ * See code example DrawMulti 
  */
 public class BezMultiCurve extends BezShape {
 

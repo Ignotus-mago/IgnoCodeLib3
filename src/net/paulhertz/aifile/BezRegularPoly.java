@@ -27,7 +27,7 @@ import processing.core.PApplet;
 /**
  * Provides factory methods to construct a regular polygonal shape consisting of straight lines.
  * 
- * @example Polygons
+ * See code example Polygons
  */
 public class BezRegularPoly extends BezShape {
 	

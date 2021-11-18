@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="package" author="true" classpath="libs/core.jar" destdir="C:\Users\ignot\Documents\Processing\libraries\IgnoCodeLib\reference" 
+        	nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" 
+        	packagenames="net.paulhertz.geom,net.paulhertz.aifile,net.paulhertz.util" 
+        	source="1.8" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

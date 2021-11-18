@@ -35,7 +35,7 @@ import processing.core.PApplet;
  * IgnoCodeLib is initialized with a reference to the host PApplet, 
  * which it makes available to other classes through {@link #getMyParent getMyParent}.
  * 
- * @example Hello 
+ * See code example Hello 
  *
  *
  */

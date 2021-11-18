@@ -40,7 +40,7 @@ import processing.core.PGraphics;
  * The colorIndex can be a number from 0 to 26, at the moment there is no provision for custom colors.
  * The layer name can be anything you want. 
  * 
- * @example DocumentExport
+ * See code example DocumentExport
  */
 public class LayerComponent extends DisplayComponent {
 	/** name of the layer, assigned automatically if not set explicitly */

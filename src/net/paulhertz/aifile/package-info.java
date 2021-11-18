@@ -1,10 +1,10 @@
 /**
 Package <code>net.paulhertz.aifile</code> provides dual functionality as a display list 
-utility in <a href="http://www.processing.org/" title="Processing" target="_blank">Processing</a> and as an export tool that writes to an 
-<a href="http://partners.adobe.com/public/developer/en/illustrator/sdk/AI7FileFormat.pdf" title="AI7.0 File Format (PDF)" target="_blank">Adobe Illustrator 7.0 file</a>. 
-AI 7.0 was the last <a href="http://partners.adobe.com/public/developer/en/illustrator/sdk/AI7FileFormat.pdf" title="AI7.0 File Format (PDF)" target="_blank">public specification</a> of Adobe's file format. It can still be extremely useful, 
-and can be imported into all current version of Illustrator . Everything in 
-<a href="http://www.flickr.com/photos/ignotus/sets/72157626088733463/" title="Sampling Patterns by Paul Hertz">this Flickr set</a>,
+utility in <a href="http://www.processing.org/" target="_blank">Processing</a> and as an export tool that writes to an 
+<a href="http://partners.adobe.com/public/developer/en/illustrator/sdk/AI7FileFormat.pdf" target="_blank">Adobe Illustrator 7.0 file</a>. 
+AI 7.0 was the last <a href="http://partners.adobe.com/public/developer/en/illustrator/sdk/AI7FileFormat.pdf" target="_blank">public specification</a> of Adobe's file format. It can still be extremely useful, 
+and can be imported into all current version of Illustrator . Everything in the 
+<a href="http://www.flickr.com/photos/ignotus/sets/72157626088733463/">Sampling Patterns Flickr set</a>,
 was generated in Processing with the help of this library.
 <p>Graphics consist of B&eacute;zier curves and lines, implemented by the class {@link net.paulhertz.aifile.BezShape BezShape} and its
 helpers, {@link net.paulhertz.aifile.LineVertex LineVertex} and {@link net.paulhertz.aifile.BezVertex BezVertex}. Text is handled by {@link net.paulhertz.aifile.PointText PointText}. 

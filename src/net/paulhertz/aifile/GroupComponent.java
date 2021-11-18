@@ -36,7 +36,7 @@ import processing.core.PGraphics;
  * another group. Components in a group are displayed and written to file with the most recently 
  * added component first (last in first out). 
  * 
- * @example DocumentExport *
+ * See code example DocumentExport 
  */
 public class GroupComponent extends DisplayComponent {
 	

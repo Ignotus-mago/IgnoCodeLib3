@@ -51,11 +51,12 @@ import java.util.Locale;
  * further information on how to enable transparency for graphics. Markup to show and hide objects
  * was new in AI 10, but is included here.
  * </p>
- * <p>See <a href="http://partners.adobe.com/public/developer/en/illustrator/sdk/AI7FileFormat.pdf" title="AI7.0 File Format (PDF)" target="_blank">Adobe Illustrator 7.0 file</a>
+ * <p>See <a href="http://www.idea2ic.com/File_Formats/Adobe%20Illustrator%20File%20Format.pdf" target="_blank">Adobe Illustrator 7.0 file</a>
+ * or <a href="https://www.yumpu.com/en/document/read/48549703/adobe-illustrator-file-format-specification-adobe-partners" target="_blank">Adobe Illustrator 7.0 file</a>
  * for detailed information on the Adobe Illustrator 7.0 file format.
  * </p>
  * 
- * @example DirectOutput
+ * See the the DirectOutput.pde file for an example of output using AIFileWriter directly. 
  */
 public class AIFileWriter {
 	// TODO 0 Xw (show) and 1 Xw (hide) as of AI 10 control visibility of objects (DONE)
@@ -292,7 +293,7 @@ void testDecimalFormat() {
      *   J      [0, 1, 2], linecap: 0 = butt end, 1 = round, 2 = square             0
      *   J      [0, 1, 2] linejoin: 0 = mitered, 1 = round, 2 = beveled             0
      *   w      positive real value, line width                                     1
-     *   M      real number > 1, miter limit: ratio of miter length/line width      4
+     *   M      real number &gt; 1, miter limit: ratio of miter length/line width      4
      *   d      array of values for dashes and gaps, phase of dash pattern          []0
      *   D      [0, 1] winding order tag, 0 = clockwise, 1 = counterclockwise       0
 	 * </pre>
@@ -612,7 +613,7 @@ void testDecimalFormat() {
 	 * unlike Processing, where fill and stroke can have separate transparency values. This
 	 * means for stroked shapes, the stroke transparency will affect the whole shape in AI.
 	 * See {@link #setTransparency(double, PrintWriter)}.
-	 * @param useTransparency
+	 * @param useTransparency   true if transparency value should be included in color attributes
 	 */
 	public static void setUseTransparency(boolean useTransparency) {
 		AIFileWriter.useTransparency = useTransparency;
@@ -857,7 +858,7 @@ void testDecimalFormat() {
 	
 	
 	/**
-	 * Writes a user-defined custom object to the file, in the format /<tagIdentifier> (<tagValue>) XT, to output.
+	 * Writes a user-defined custom object to the file, in the format /&lt;tagIdentifier&gt; (&lt;tagValue&gt;) XT, to output.
 	 * 
 	 * @param tagIdentifier   a <code>String</code> to identify the custom object
 	 * @param tagValue        a <code>String</code> that is assigned to the object as its value
