@@ -31,11 +31,11 @@ public class BezLine extends BezShape {
 	 * Constructs a straight line between (x1, y1) and (x2, y2), with black stroke and no fill.
 	 * Fill, stroke, and weight are set from their values in the Processing environment. 
 	 * Sets center of transformation (rotation, etc) to first point.
+	 * Called by static methods that return an instance of BezLine.
 	 * @param x1   x-coordinate of first point
 	 * @param y1   y-coordinate of first point
 	 * @param x2   x-coordinate of second point
 	 * @param y2   y-coordinate of second point
-	 * @return     a straight line BezShape of type BezShape.BEZ_LINE
 	 */
 	protected BezLine(PApplet parent, float x1, float y1, float x2, float y2) {
 		super(parent, x1, y1, false);

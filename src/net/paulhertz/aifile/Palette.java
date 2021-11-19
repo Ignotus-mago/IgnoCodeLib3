@@ -87,7 +87,7 @@ public class Palette {
 	}
 	
 	/**
-	 * Transforms an {@link net.paulhertz.aifile.RGBColor RGBColor} to a 32-bit </code>int</code>
+	 * Transforms an {@link net.paulhertz.aifile.RGBColor RGBColor} to a 32-bit <code>int</code>
 	 * and adds it to the colorSet of this Palette.
 	 * @param rgb   an {@link RGBColor RGBColor}
 	 */
@@ -100,7 +100,7 @@ public class Palette {
 	}
 	
 	/**
-	 * Transforms a {@link net.paulhertz.aifile.CMYKColor CMYKColor} to a 32-bit </code>int</code>
+	 * Transforms a {@link net.paulhertz.aifile.CMYKColor CMYKColor} to a 32-bit <code>int</code>
 	 * and adds it to the colorSet of this Palette.
 	 * @param cmyk   a {@link CMYKColor CMYKColor}
 	 */

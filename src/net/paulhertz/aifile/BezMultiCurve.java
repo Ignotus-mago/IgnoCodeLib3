@@ -35,13 +35,13 @@ import processing.core.PApplet;
 public class BezMultiCurve extends BezShape {
 
 	/**
-	 * Constructs a multi-segment Bezier curve from an array of float.
+	 * Constructs a multi-segment Bezier curve from an array of float, of type BezShape.BEZ_MULTICURVE.
 	 * Fill, stroke, and weight are set from their values in the Processing environment.
 	 * The first coordinate pair is the initial anchor point, the following coordinate pairs correspond
 	 * to the first control point, second control point, and final anchor point of each additional curve.
 	 * The shape will be open and consist only of Bezier curves with no straight lines. 
 	 * @param coords   an array of coordinate pairs
-	 * @return         a multi-segment curved line of type BezShape.BEZ_MULTICURVE
+	 *          
 	 */
 	protected BezMultiCurve(PApplet parent, float[] coords) {
 		super(parent);

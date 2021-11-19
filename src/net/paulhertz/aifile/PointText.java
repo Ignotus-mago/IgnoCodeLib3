@@ -605,31 +605,31 @@ public class PointText extends DisplayComponent {
 	}
 	
 	/**
-	 * @throws UnsupportedOperationException, this is a terminal component
+	 * Throws an UnsupportedOperationException, this is a terminal component
 	 */
 	public void add(DisplayComponent component) {
 		throw new UnsupportedOperationException("Attempt to add child to a terminal node."); 
 	}
 	/**
-	 * @throws UnsupportedOperationException, this is a terminal component
+	 * Throws an UnsupportedOperationException, this is a terminal component
 	 */
 	public void add(ArrayList<? extends DisplayComponent> comps) {
 		throw new UnsupportedOperationException("Attempt to add child to a terminal node."); 
 	}
 	/**
-	 * @throws UnsupportedOperationException, this is a terminal component
+	 * Throws an UnsupportedOperationException, this is a terminal component
 	 */
 	public boolean remove(DisplayComponent component) {
 		throw new UnsupportedOperationException("Attempt to remove child from a terminal node."); 
 	}
 	/**
-	 * @throws UnsupportedOperationException, this is a terminal component
+	 * Throws an UnsupportedOperationException, this is a terminal component
 	 */
 	public DisplayComponent get(int index) {
 		throw new UnsupportedOperationException("Attempt to access child of a terminal node.");
 	}
 	/**
-	 * @throws UnsupportedOperationException, this is a terminal component
+	 * Throws an UnsupportedOperationException, this is a terminal component
 	 */
 	public Iterator<DisplayComponent> iterator() {
 		throw new UnsupportedOperationException("Attempt to access children array of a terminal node.");

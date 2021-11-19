@@ -29,6 +29,7 @@ import processing.core.PGraphics;
 /**
  * @author paulhz
  * TODO bounding box and geometric center point of group, name of group (?)
+ * TODO clear() method for deleting subcomponents.
  */
 /**
  * Groups together geometry ({@link net.paulhertz.aifile.BezShape BezShape}), 

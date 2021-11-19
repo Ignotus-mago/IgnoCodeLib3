@@ -1,5 +1,11 @@
 package net.paulhertz.aifile;
 
+/**
+ * Finds a DisplayComponent with specified ID. If the component is found, {@link compIsFound()}
+ * returns {@code true} and the component can be retrieved from {@link getFoundComp()}.
+ * Typically, you would cache the ID or IDs upon instantiating the component, for later retrieval.
+ *
+ */
 public class FindComponentWithIDVisitor extends ComponentVisitor {
 	private int idToFind;
 	private DisplayComponent foundComp;
@@ -46,7 +52,7 @@ public class FindComponentWithIDVisitor extends ComponentVisitor {
 
 	
 	/**
-	 * @return the compIsFound
+	 * @return the value of compIsFound, {@code true} if a DisplayComponent with the supplied ID was found, {@code false} otherwise.
 	 */
 	public boolean compIsFound() {
 		return compIsFound;

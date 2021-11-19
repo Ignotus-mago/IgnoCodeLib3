@@ -94,31 +94,31 @@ public class CustomComponent extends DisplayComponent {
 		this.tagValue = tagValue;
 	}
 	/** 
-	 * @throws UnsupportedOperationException, CustomComponent is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, CustomComponent is a terminal (leaf) node
 	 */
 	public void add(DisplayComponent component) {
 		throw new UnsupportedOperationException("Attempt to add child to a terminal node."); 
 	}
 	/** 
-	 * @throws UnsupportedOperationException, CustomComponent is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, CustomComponent is a terminal (leaf) node
 	 */
 	public void add(ArrayList<? extends DisplayComponent> comps) {
 		throw new UnsupportedOperationException("Attempt to add child to a terminal node."); 
 	}
 	/** 
-	 * @throws UnsupportedOperationException, CustomComponent is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, CustomComponent is a terminal (leaf) node
 	 */
 	public boolean remove(DisplayComponent component) {
 		throw new UnsupportedOperationException("Attempt to remove child from a terminal node."); 
 	}
 	/** 
-	 * @throws UnsupportedOperationException, CustomComponent is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, CustomComponent is a terminal (leaf) node
 	 */
 	public DisplayComponent get(int index) {
 		throw new UnsupportedOperationException("Attempt to access child of a terminal node.");
 	}
 	/** 
-	 * @throws UnsupportedOperationException, CustomComponent is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, CustomComponent is a terminal (leaf) node
 	 */
 	public Iterator<DisplayComponent> iterator() {
 		throw new UnsupportedOperationException("Attempt to access children array of a terminal node.");

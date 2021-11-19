@@ -364,31 +364,31 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	
 	@Override
 	/** 
-	 * @throws UnsupportedOperationException BezShape is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, BezShape is a terminal (leaf) node
 	 */
 	public void add(DisplayComponent component) {
 		throw new UnsupportedOperationException("Attempt to add child to a terminal node."); 
 	}
 	/** 
-	 * @throws UnsupportedOperationException, BezShape is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, BezShape is a terminal (leaf) node
 	 */
 	public void add(ArrayList<? extends DisplayComponent> comps) {
 		throw new UnsupportedOperationException("Attempt to add child to a terminal node."); 
 	}
 	/** 
-	 * @throws UnsupportedOperationException, BezShape is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, BezShape is a terminal (leaf) node
 	 */
 	public boolean remove(DisplayComponent component) {
 		throw new UnsupportedOperationException("Attempt to remove child from a terminal node."); 
 	}
 	/** 
-	 * @throws UnsupportedOperationException, BezShape is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, BezShape is a terminal (leaf) node
 	 */
 	public DisplayComponent get(int index) {
 		throw new UnsupportedOperationException("Attempt to access child of a terminal node.");
 	}
 	/** 
-	 * @throws UnsupportedOperationException, BezShape is a terminal (leaf) node
+	 * Throws an UnsupportedOperationException, BezShape is a terminal (leaf) node
 	 */
 	public Iterator<DisplayComponent> iterator() {
 		throw new UnsupportedOperationException("Attempt to access children array of a terminal node.");
@@ -899,7 +899,8 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	
 	/**
 	 * Returns the average of all anchor points of the vertices of this shape.
-	 * @return    the average x- and y-coordinates of the shape's anchor points.
+	 * @param shape   a BezShape
+	 * @return        the average x- and y-coordinates of the shape's anchor points.
 	 * @since October 21, 2011
 	 */
 	public LineVertex getAnchorCenter(BezShape shape) {
@@ -1008,7 +1009,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * Returns an array of all vertex coordinates. A {@code LineVertex} adds two values to the array
 	 * and a {@code BezVertex} adds six values (two control points and an anchor point). There is no
 	 * inherent way to distinguish which values represent control points and which represent anchor points. 
-	 * @see #asPolygon(PApplet, int).
+	 * @see asPolygon(int)  
 	 * @return   an array of {@code float} generated from the vertices of this shape.
 	 */
 	public float[] getCoords() {
@@ -1139,7 +1140,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	}
 	
 	/**
-	 * @TODO this is new
+	 * TODO this is new
 	 * @param steps number of line segments in a curve
 	 * @return
 	 */

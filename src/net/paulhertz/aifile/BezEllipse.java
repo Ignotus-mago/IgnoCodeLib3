@@ -37,13 +37,13 @@ public class BezEllipse extends BezShape {
 	/**
 	 * Creates a closed elliptical BezShape with sectors number of Bezier curves.
 	 * Fill, stroke, and weight of shapes are set from their values in the Processing environment.
+	 * Called by static methods that return an instance of BezCircle.
      * @param parent   PApplet used for calls to the Processing environment, notably for drawing
 	 * @param xctr      x-coordinate of center of circle
 	 * @param yctr      y-coordinate of center of circle
 	 * @param w         width of the ellipse
 	 * @param h         height of the ellipse
 	 * @param sectors   integer for number of equal divisions of circle
-	 * @return          an elliptical BezShape of type BezShape.BEZ_ELLIPSE
 	 */
 	protected BezEllipse(PApplet parent, float xctr, float yctr, float w, float h, int sectors) {
 		super(parent, xctr, w/2 + yctr, true);

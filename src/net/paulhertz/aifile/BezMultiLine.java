@@ -39,7 +39,7 @@ public class BezMultiLine extends BezShape {
 	 * Fill, stroke, and weight are set from their values in the Processing environment. 
 	 * The shape will be open and consist only of straight lines.
 	 * @param coords   an array of coordinate pairs
-	 * @return         a multi-segment line of type BezShape.BEZ_MULTILINE
+	 * Instantiates a multi-segment line of type BezShape.BEZ_MULTILINE
 	 */
 	protected BezMultiLine(PApplet parent, float[] coords) {
 		super(parent);

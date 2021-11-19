@@ -38,12 +38,12 @@ public class BezCircle extends BezShape {
 	/**
 	 * Creates a closed circular BezShape with sectors number of Bezier curves.
 	 * Fill, stroke, and weight of shapes are set from their values in the Processing environment.
+	 * Called by static methods that return a BezCircle instance.
      * @param parent    PApplet used for calls to the Processing environment, notably for drawing
 	 * @param xctr      x-coordinate of center of circle
 	 * @param yctr      y-coordinate of center of circle
 	 * @param radius    radius of the circle
 	 * @param sectors   integer for number of equal divisions of circle
-	 * @return          a circular BezShape of type BezShape.BEZ_CIRCLE
 	 */
 	protected BezCircle(PApplet parent, float xctr, float yctr, float radius, int sectors) {
 		super(parent, xctr, radius + yctr, true);

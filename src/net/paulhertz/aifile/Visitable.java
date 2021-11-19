@@ -43,7 +43,7 @@ public interface Visitable {
 	 * <p>
 	 * The reference is passed back to the visitor through a method of the form 
 	 * visitor.visit&lt;ComponentClassName&gt;( this );
-	 * See {@link #net.paulhertz.aifile.ComponentVisitor ComponentVisitor}
+	 * See {@link net.paulhertz.aifile.ComponentVisitor ComponentVisitor}
 	 * </p>
 	 * <p>
 	 * The order of steps 1 and 2 determines if traversal of the composite 

@@ -47,10 +47,10 @@ import processing.core.PVector;
  * with {@link #pop()}. The {@link #clearStack()} command clears the stored states. 
  * </p>
  * <p>
- * Shapes can be written to an Adobe Illustrator 7.0 file with the {@link #write(PrintWriter)} command; however, 
- * a preferred and simpler techniques is to call {@link #getTrails()}, which returns a GroupComponent that can be
- * added to a DocumentComponent or a LayerComponent. A DocumentComponent can handle the creation of an Illustrator 
- * document and export geometry to it with its {@link net.paulhertz.aifile.DocumentComponent#write(PrintWriter)} command.
+ * Shapes can be captured and then written to an Adobe Illustrator 7.0 file with a call to {@link #getTrails()}, 
+ * which returns a GroupComponent that can be added to a DocumentComponent or a LayerComponent. 
+ * A DocumentComponent can handle the creation of an Illustrator document and export geometry to 
+ * it with its {@link net.paulhertz.aifile.DocumentComponent#write(PrintWriter)} command.
  * </p>
  * 
  * @see net.paulhertz.aifile.DocumentComponent

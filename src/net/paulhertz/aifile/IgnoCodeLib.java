@@ -53,7 +53,7 @@ public class IgnoCodeLib {
 	 * does not require initialization. It does require you to pass a reference to 
 	 * a PApplet to some of its classes. 
 	 * 
-	 * @example Hello
+	 * See code example Hello
 	 * @param theParent
 	 */
 	public IgnoCodeLib(PApplet theParent) {
