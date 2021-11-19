@@ -22,6 +22,11 @@ package net.paulhertz.aifile;
 import processing.core.PApplet;
 
 
+/**
+ * Searches a display graph component to change fill, stroke or weight attributes of DisplayComponents 
+ * that implement ColorableINF.
+ *
+ */
 public class ShapeAttributeVisitor extends ComponentVisitor implements ColorableINF {
 	private boolean hasFill;
 	private boolean hasStroke;
@@ -50,7 +55,7 @@ public class ShapeAttributeVisitor extends ComponentVisitor implements Colorable
 		return visitor;
 	}
 	
-	public static ShapeAttributeVisitor makeStrokedShapeVisitor(int strokeColor, int weight) {
+	public static ShapeAttributeVisitor makeStrokedShapeVisitor(int strokeColor, float weight) {
 		ShapeAttributeVisitor visitor = new ShapeAttributeVisitor();
 		visitor.setStrokeColor(strokeColor);
 		visitor.setWeight(weight);
@@ -59,7 +64,7 @@ public class ShapeAttributeVisitor extends ComponentVisitor implements Colorable
 	}
 
 
-	public static ShapeAttributeVisitor makeFilledStrokedShapeVisitor(int fillColor, int strokeColor, int weight) {
+	public static ShapeAttributeVisitor makeFilledStrokedShapeVisitor(int fillColor, int strokeColor, float weight) {
 		ShapeAttributeVisitor visitor = new ShapeAttributeVisitor();
 		visitor.setFillColor(fillColor);
 		visitor.setStrokeColor(strokeColor);
