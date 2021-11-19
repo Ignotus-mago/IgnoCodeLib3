@@ -25,7 +25,7 @@ hs_err_pid*
 /.classpath
 /bin
 # uncomment this line to ignore the template and distribution files, comment it to include them #
-/processing-library-template-3.0.1
+#/processing-library-template-3.0.1
 
 # Compiled source #
 ###################
