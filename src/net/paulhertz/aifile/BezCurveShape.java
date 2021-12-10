@@ -21,17 +21,17 @@ package net.paulhertz.aifile;
 import processing.core.PApplet;
 
 /**
- * Provides factory methods to construct a closed path consisting of Bezier curves.
+ * Provides factory methods to construct a closed path consisting of B&eacute;zier curves.
  */
 public class BezCurveShape extends BezShape {
 
 	/**
-	 * Constructs a multi-segment BŽzier curve from an array of float.
+	 * Constructs a multi-segment B&eacute;zier curve from an array of float.
 	 * Fill, stroke, and weight are set from their values in the Processing environment.
 	 * The first coordinate pair is the initial anchor point, the following coordinate pairs correspond
 	 * to the first control point, second control point, and final anchor point of each additional curve.
 	 * The final anchor point and the first coordinate pair should be identical for a properly closed shape.
-	 * The shape will be closed and consist only of Bezier curves with no straight lines. 
+	 * The shape will be closed and consist only of B&eacute;zier curves with no straight lines. 
 	 * @param parent   a PApplet, most likely the one hosting this object
 	 * @param coords   an array of coordinate pairs
 	 */
@@ -53,12 +53,12 @@ public class BezCurveShape extends BezShape {
 	}
 	
 	/**
-	 * Returns a multi-segment BŽzier curve from an array of float.
+	 * Returns a multi-segment B&eacute;zier curve from an array of float.
 	 * Fill, stroke, and weight are set from their values in the Processing environment.
 	 * The first coordinate pair is the initial anchor point, the following coordinate pairs correspond
 	 * to the first control point, second control point, and final anchor point of each additional curve.
 	 * The final anchor point and the first coordinate pair should be identical for a properly closed shape.
-	 * The shape will be closed and consist only of Bezier curves with no straight lines. 
+	 * The shape will be closed and consist only of B&eacute;zier curves with no straight lines. 
 	 * @param parent   reference to the host PApplet, used for calls to Processing environment
 	 * @param coords   an array of coordinate pairs
 	 * @return         a multi-segment curved line of type BezShape.BEZ_MULTICURVE
@@ -67,12 +67,12 @@ public class BezCurveShape extends BezShape {
 		return new BezCurveShape(parent, coords);
 	}
 	/**
-	 * Returns a multi-segment BŽzier curve from an array of float.
+	 * Returns a multi-segment B&eacute;zier curve from an array of float.
 	 * Fill, stroke, and weight are set from their values in the Processing environment.
 	 * The first coordinate pair is the initial anchor point, the following coordinate pairs correspond
 	 * to the first control point, second control point, and final anchor point of each additional curve.
 	 * The final anchor point and the first coordinate pair should be identical for a properly closed shape.
-	 * The shape will be closed and consist only of Bezier curves with no straight lines. 
+	 * The shape will be closed and consist only of B&eacute;zier curves with no straight lines. 
      * PApplet used for calls to the Processing environment is obtained from 
      * {@link net.paulhertz.aifile.IgnoCodeLib IgnoCodeLib}, which must be correctly initialized in setup. 
      * If IgnoCodeLib does not have a reference to a PApplet, it throws a NullPointerException. 

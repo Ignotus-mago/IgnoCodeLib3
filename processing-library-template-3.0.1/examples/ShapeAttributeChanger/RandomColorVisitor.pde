@@ -1,5 +1,7 @@
 /** 
  * Extends Component Visitor to assign new random colors to BezShapes in a display graph. 
+ * To use a visitor on any DisplayComponent in the display graph (i.e. the tree of layers, groups,
+ * shapes and text) just call the accept(visitor) method of the component.
  */
 
 class RandomColorVisitor extends ComponentVisitor {
@@ -29,8 +31,8 @@ class RandomColorVisitor extends ComponentVisitor {
     this.lights = newLights;
   }
   
-    /**
-   * visits a BezShape node
+  /**
+   * Visits a BezShape node and does something with it.
    * @param comp   a BezShape instance
    * We can implement all sorts of logic here to decide what to do with a BezShape. 
    * You can even do animation. 
