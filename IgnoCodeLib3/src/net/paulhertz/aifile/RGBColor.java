@@ -25,7 +25,8 @@ import net.paulhertz.aifile.RGBColor;
  * @author paulhz
  */
 /**
- * Provides storage and conversion utilities for an RGBColor.
+ * Provides storage and conversion utilities for an RGBColor in floating point format 
+ * and range used by AIFileWriter. Not to be confused with Processing RGB. 
  */
 public class RGBColor {
 	protected double r;
@@ -45,7 +46,8 @@ public class RGBColor {
 	}
 	
 	/**
-	 * Instantiates an RGB color from r, g and b components represented as ints in the range 0..255
+	 * Instantiates an RGB color from r, g and b components represented as ints in the range 0..255,
+	 * the format used in Processing and most bitmap graphics applications.
 	 * @param r   red component
 	 * @param g   green component
 	 * @param b   blue component
