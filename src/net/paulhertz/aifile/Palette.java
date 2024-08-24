@@ -85,9 +85,9 @@ public class Palette {
 	 * Adds black, white and gray to the palette.
 	 */
 	public void addBlackWhiteGray() {
-		colorSet.add(new Integer(composeColor(0, 0, 0, 255)));
-		colorSet.add(new Integer(composeColor(255, 255, 255, 255)));
-		colorSet.add(new Integer(composeColor(127, 127, 127, 255)));
+		colorSet.add(Integer.valueOf(composeColor(0, 0, 0, 255)));
+		colorSet.add(Integer.valueOf(composeColor(255, 255, 255, 255)));
+		colorSet.add(Integer.valueOf(composeColor(127, 127, 127, 255)));
 	}
 	
 	/**
@@ -96,7 +96,7 @@ public class Palette {
 	 * @param rgb   an {@link RGBColor RGBColor}
 	 */
 	public void addColor(RGBColor rgb) {
-		this.colorSet.add(new Integer(composeColor( 
+		this.colorSet.add(Integer.valueOf(composeColor( 
 				(int) Math.round(rgb.r * 255), 
 				(int) Math.round(rgb.g * 255), 
 				(int) Math.round(rgb.b * 255), 
@@ -118,7 +118,7 @@ public class Palette {
 	 * @param argb   a Processing-format color, alpha, red, green and blue stored as 4 bytes in an 32-bit int
 	 */
 	public void addColor(int argb) {
-		this.colorSet.add(new Integer(argb));
+		this.colorSet.add(Integer.valueOf(argb));
 	}
 	
 	/**
@@ -257,7 +257,7 @@ public class Palette {
 		int[] chip = rgbComponents(argb);
 		int[] perm = {0,1,2};
 		for (int i = 0; i < 6; i++) {
-			Integer farb = new Integer(composeColor(chip[perm[0]], chip[perm[1]], chip[perm[2]], 255));
+			Integer farb = Integer.valueOf(composeColor(chip[perm[0]], chip[perm[1]], chip[perm[2]], 255));
 			if (!temp.contains(farb)) temp.add(farb);
 			Permutator.nextPerm(perm);     
 		}

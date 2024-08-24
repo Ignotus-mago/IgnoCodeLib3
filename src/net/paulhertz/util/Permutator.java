@@ -52,7 +52,7 @@ public class Permutator {
 	public void initPerm() {
 		perm.clear();
 		for (int i = 0; i < size; i++) {
-			perm.add(new Integer(i));
+			perm.add(Integer.valueOf(i));
 		}
 	}
 	

@@ -646,6 +646,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @param useTransparency
 	 * @deprecated  preferred usage is {@code AIFileWriter.setUseTransparency()}.
 	 */
+	@Deprecated
 	public static void setUseTransparency(boolean useTransparency) {
 		AIFileWriter.useTransparency = useTransparency;
 	}
@@ -1599,6 +1600,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @deprecated
 	 * @param matx
 	 */
+	@Deprecated
 	public void transformShape(Matrix3 matx) {
 		transform(matx);
 	}
@@ -1983,6 +1985,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return          a circular BezShape of type BezShape.BEZ_CIRCLE
 	 * @deprecated		Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezCircle bezCircle(PApplet parent, float xctr, float yctr, float radius, int sectors) {
 		return BezCircle.makeCenterRadiusSectors(parent, xctr, yctr, radius, sectors);
 	}
@@ -1998,6 +2001,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return          an elliptical BezShape of type BezShape.BEZ_ELLIPSE
 	 * @deprecated		Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezEllipse bezEllipse(PApplet parent, float xctr, float yctr, float width, float height, int sectors) {
 		return BezEllipse.makeCenterWidthHeightSectors(parent, xctr, yctr, width, height, sectors);
 	}
@@ -2013,6 +2017,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return         a polygonal BezShape of type BezShape.BEZ_REGULAR_POLY
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezRegularPoly bezRegularPoly(PApplet parent, float xctr, float yctr, float radius, int sides) {
 		return BezRegularPoly.makeCenterRadiusSides(parent, xctr, yctr, radius, sides);
 	}
@@ -2029,6 +2034,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return         a multi-segment curved line of type BezShape.BEZ_MULTICURVE
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezCurveShape bezCurveShape(PApplet parent, float[] coords) {
 		return BezCurveShape.makeCurvePoly(parent, coords);
 	}
@@ -2044,6 +2050,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return         an equilateral triangle BezShape of type BezShape.BEZ_TRIANGLE
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezTriangle bezTriangle(PApplet parent, float xctr, float yctr, float radius) {
 		return BezTriangle.makeCenterRadius(parent, xctr, yctr, radius);
 	}
@@ -2060,6 +2067,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return     a triangular BezShape of type BezShape.BEZ_TRIANGLE
 	 * @deprecated		Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezTriangle bezTriangle(PApplet parent, float x1, float y1, float x2, float y2, float x3, float y3) {
 		return BezTriangle.makeThreePoints(parent, x1, y1, x2, y2, x3, y3);
 	}
@@ -2074,6 +2082,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return         a rectangular BezShape of type BezShape.BEZ_RECTANGLE
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezRectangle bezRectangle(PApplet parent, float left, float top, float right, float bottom) {
 		return BezRectangle.makeLeftTopRightBottom(parent, left, top, right, bottom);
 	}
@@ -2089,6 +2098,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return     a straight line BezShape of type BezShape.BEZ_LINE
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezLine bezLine(PApplet parent, float x1, float y1, float x2, float y2) {
 		return BezLine.makeCoordinates(parent, x1, y1, x2, y2);
 	}
@@ -2108,6 +2118,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return      a curved line BezShape of type BezShape.BEZ_CURVE
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezShape bezCurve(PApplet parent, float ax1, float ay1, float cx1, float cy1, float cx2, float cy2, 
 			float ax2, float ay2) {
 		return BezCurve.makeCurve(parent, ax1, ay1, cx1, cy1, cx2, cy2, ax2, ay2);
@@ -2121,6 +2132,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return         a multi-segment line of type BezShape.BEZ_MULTILINE
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezMultiLine bezMultiLine(PApplet parent, float[] coords) {
 		return BezMultiLine.makeMultiLine(parent, coords);
 	}
@@ -2132,6 +2144,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return         a multi-segment line of type BezShape.BEZ_MULTILINE
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezPoly bezPoly(PApplet parent, float[] coords) {
 		return BezPoly.makePoly(parent, coords);
 	}
@@ -2145,6 +2158,7 @@ public class BezShape extends DisplayComponent implements ColorableINF {
 	 * @return         a multi-segment curved line of type BezShape.BEZ_MULTICURVE
 	 * @deprecated	   Call factory methods in the returned class instead. 
 	 */
+	@Deprecated
 	public static BezMultiCurve bezMultiCurve(PApplet parent, float[] coords) {
 		return BezMultiCurve.makeMultiCurve(parent, coords);
 	}

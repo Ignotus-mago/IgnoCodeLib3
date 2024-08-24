@@ -287,7 +287,7 @@ public class RandUtil {
 	public double quickGauss() {
 		if (null == Nrand) {
 			// number of samples to use in generating number
-			Nrand = new Integer(4); 
+			Nrand = Integer.valueOf(4); 
 			// upper bound from random generator
 			Arand = 1;
 			// parameter for linear transformation
@@ -313,7 +313,7 @@ public class RandUtil {
 	public double quickGauss(double mean, double variance) {
 		if (null == Nrand) {
 			// number of samples to use in generating number
-			Nrand = new Integer(4); 
+			Nrand = Integer.valueOf(4); 
 			// upper bound from random generator
 			Arand = 1.0;
 			// parameter for linear transformation
