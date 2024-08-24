@@ -21,11 +21,6 @@ import processing.core.*;
 
 import java.io.PrintWriter;
 
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.LineVertex;
-import net.paulhertz.aifile.Vertex2DINF;
-
 
 /**
  * Stores a line vertex consisting of a single point.

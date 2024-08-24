@@ -19,12 +19,6 @@
 
 package net.paulhertz.aifile;
 
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.ColorableINF;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.Palette;
-import net.paulhertz.aifile.ShapeAttributeVisitor;
-
 import processing.core.PApplet;
 
 

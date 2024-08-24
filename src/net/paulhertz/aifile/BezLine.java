@@ -20,8 +20,6 @@ package net.paulhertz.aifile;
 
 import processing.core.PApplet;
 
-import net.paulhertz.aifile.BezLine;
-import net.paulhertz.aifile.BezShape;
 import net.paulhertz.geom.GeomUtils;
 
 /**

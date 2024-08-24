@@ -19,8 +19,6 @@
 
 package net.paulhertz.aifile;
 
-import net.paulhertz.aifile.CMYKColor;
-import net.paulhertz.aifile.RGBColor;
 
 /**
  * @author paulhz

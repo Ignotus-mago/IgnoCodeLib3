@@ -29,10 +29,6 @@ import java.util.Date;
 import java.util.Locale;
 // import java.util.ListIterator;
 
-// import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.CMYKColor;
-import net.paulhertz.aifile.PointText;
-import net.paulhertz.aifile.RGBColor;
 
 /**
  * @author Paul Hertz

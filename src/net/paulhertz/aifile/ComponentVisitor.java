@@ -19,13 +19,6 @@
 
 package net.paulhertz.aifile;
 
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.CustomComponent;
-import net.paulhertz.aifile.DocumentComponent;
-import net.paulhertz.aifile.GroupComponent;
-import net.paulhertz.aifile.LayerComponent;
-import net.paulhertz.aifile.PointText;
-
 
 /**
  * Abstract class for concrete Visitors to classes that implement the Visitable interface.

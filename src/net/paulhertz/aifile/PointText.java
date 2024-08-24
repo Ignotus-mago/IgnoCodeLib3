@@ -26,14 +26,6 @@ import java.util.Iterator;
 
 import net.paulhertz.geom.Matrix3;
 
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.DisplayComponent;
-import net.paulhertz.aifile.Palette;
-import net.paulhertz.aifile.PointText;
-import net.paulhertz.aifile.RGBColor;
-//import java.util.ListIterator;
-
 import processing.core.*;
 
 /**
@@ -272,16 +264,16 @@ public class PointText extends DisplayComponent {
 	/**
 	 * Sets the render mode of text, generally safe to stick with the default 0, or with 1 or 2. 
 	 * @param render the render to set
-	 * 0 Ñ filled text
-	 * 1 Ñ stroked text
-	 * 2 Ñ filled and stroked text
-	 * 3 Ñ invisible text
-	 * 4 Ñ masked and filled text
-	 * 5 Ñ masked and stroked text
-	 * 6 Ñ masked, filled, and stroked text
-	 * 7 Ñ masked (only) text
-	 * 8 Ñ filled text followed by render mode 9 (pattern prototype only)
-	 * 9 Ñ stroked text (preceded by render mode 8 text, pattern prototype only)
+	 * 0 ï¿½ filled text
+	 * 1 ï¿½ stroked text
+	 * 2 ï¿½ filled and stroked text
+	 * 3 ï¿½ invisible text
+	 * 4 ï¿½ masked and filled text
+	 * 5 ï¿½ masked and stroked text
+	 * 6 ï¿½ masked, filled, and stroked text
+	 * 7 ï¿½ masked (only) text
+	 * 8 ï¿½ filled text followed by render mode 9 (pattern prototype only)
+	 * 9 ï¿½ stroked text (preceded by render mode 8 text, pattern prototype only)
 	 */
 	public void setRender(int render) {
 		this.render = render;
@@ -411,11 +403,11 @@ public class PointText extends DisplayComponent {
 	}
 	/**
 	 * @param alignment   the alignment to set
-	 * 0Ñleft aligned
-	 * 1Ñcenter aligned
-	 * 2Ñright aligned
-	 * 3Ñjustified (right and left)
-	 * 4Ñjustified including last line
+	 * 0ï¿½left aligned
+	 * 1ï¿½center aligned
+	 * 2ï¿½right aligned
+	 * 3ï¿½justified (right and left)
+	 * 4ï¿½justified including last line
 	 */
 	public void setAlignment(int alignment) {
 		this.alignment = alignment;

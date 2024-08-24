@@ -25,27 +25,6 @@ import java.io.PrintWriter;
 import net.paulhertz.geom.GeomUtils;
 import net.paulhertz.geom.Matrix3;
 
-/* internal imports */
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.BezCircle;
-import net.paulhertz.aifile.BezCurve;
-import net.paulhertz.aifile.BezCurveShape;
-import net.paulhertz.aifile.BezEllipse;
-import net.paulhertz.aifile.BezLine;
-import net.paulhertz.aifile.BezMultiCurve;
-import net.paulhertz.aifile.BezMultiLine;
-import net.paulhertz.aifile.BezPoly;
-import net.paulhertz.aifile.BezRectangle;
-import net.paulhertz.aifile.BezRegularPoly;
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.BezTriangle;
-import net.paulhertz.aifile.BezVertex;
-import net.paulhertz.aifile.ColorableINF;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.DisplayComponent;
-import net.paulhertz.aifile.LineVertex;
-import net.paulhertz.aifile.Palette;
-import net.paulhertz.aifile.Vertex2DINF;
 
 import processing.core.*;
 

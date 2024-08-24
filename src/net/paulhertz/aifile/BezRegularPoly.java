@@ -22,8 +22,6 @@ import java.awt.geom.Point2D;
 
 import processing.core.PApplet;
 
-import net.paulhertz.aifile.BezRegularPoly;
-import net.paulhertz.aifile.BezShape;
 import net.paulhertz.geom.GeomUtils;
 import net.paulhertz.geom.Matrix3;
 

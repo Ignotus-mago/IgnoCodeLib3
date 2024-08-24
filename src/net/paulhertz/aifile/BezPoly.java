@@ -20,10 +20,6 @@ package net.paulhertz.aifile;
 
 import java.util.ArrayList;
 
-import net.paulhertz.aifile.BezPoly;
-import net.paulhertz.aifile.BezShape;
-import net.paulhertz.aifile.LineVertex;
-import net.paulhertz.aifile.Vertex2DINF;
 
 import processing.core.PApplet;
 

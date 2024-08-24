@@ -27,10 +27,6 @@ import java.util.Iterator;
 
 import net.paulhertz.geom.Matrix3;
 
-import net.paulhertz.aifile.AIFileWriter;
-import net.paulhertz.aifile.ComponentVisitor;
-import net.paulhertz.aifile.DisplayComponent;
-
 import processing.core.PApplet;
 import processing.core.PGraphics;
 

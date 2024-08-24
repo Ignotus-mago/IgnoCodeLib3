@@ -21,8 +21,6 @@ package net.paulhertz.aifile;
 import java.io.PrintWriter;
 import java.util.*;
 
-import net.paulhertz.aifile.DisplayComponent;
-import net.paulhertz.aifile.Visitable;
 import net.paulhertz.geom.Matrix3;
 
 import processing.core.*;

@@ -18,9 +18,6 @@
  */
 package net.paulhertz.aifile;
 
-import net.paulhertz.aifile.BezCurve;
-import net.paulhertz.aifile.BezShape;
-
 import processing.core.PApplet;
 
 /**
@@ -29,7 +26,7 @@ import processing.core.PApplet;
 public class BezCurve extends BezShape {
 
 	/**
-	 * Constructs a single BŽzier curve.
+	 * Constructs a single Bï¿½zier curve.
 	 * Fill, stroke, and weight are set from their values in the Processing environment. 
 	 * The curve is initially open ({@code isClosed == false}).
 	 * @param parent   reference to the host PApplet, used for calls to Processing environment
@@ -50,7 +47,7 @@ public class BezCurve extends BezShape {
 
 
 	/**
-	 * Constructs a single BŽzier curve.
+	 * Constructs a single Bï¿½zier curve.
 	 * Fill, stroke, and weight are set from their values in the Processing environment. 
 	 * The curve is initially open ({@code isClosed == false}).
 	 * @param parent   reference to the host PApplet, used for calls to Processing environment
@@ -69,7 +66,7 @@ public class BezCurve extends BezShape {
 		return new BezCurve(parent, ax1, ay1, cx1, cy1, cx2, cy2, ax2, ay2);
 	}
 	/**
-	 * Constructs a single BŽzier curve.
+	 * Constructs a single Bï¿½zier curve.
 	 * Fill, stroke, and weight are set from their values in the Processing environment. 
 	 * The curve is initially open ({@code isClosed == false}).
      * PApplet used for calls to the Processing environment is obtained from 
