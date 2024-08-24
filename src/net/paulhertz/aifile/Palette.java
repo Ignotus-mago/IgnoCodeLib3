@@ -21,6 +21,8 @@ package net.paulhertz.aifile;
 import java.io.PrintWriter;
 import java.util.*;
 
+import net.paulhertz.util.*;
+
 
 // TODO utility functions for sorting, etc.
 // TODO support CMYK
